@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Gantt.css">
+	<title>Gantt Chart</title>
+</head>
+<body>
+	<div class = 'bars'>
+			<div id = "tasks">Tasks</div>
+			<div id = "days">Days</div>
+	</div>
+		<div class = "content">
+
+			<ul class="options">
+				<li class="task-title">Add Task</li>
+				<br>
+				<span><label for="tlabel">Task:</label>
+				<input type="text" id="tlabel" name="tlabel" placeholder="Enter a task">
+				<label for="color">Color:</label>
+				<select id="color">
+  				<option value="pink">Pink</option>
+  				<option value="mediumpurple">Purple</option>
+  				<option value="skyblue">BLUE</option>
+  				<option value="paleturquoise">Turquoise</option>
+  				<option value="lightseagreen">Green</option>
+				</select><br><br>
+				</span>
+				<span>
+				<label for="from">From:</label>
+				<select id="from">
+  				<option value="mon">Monday</option>
+  				<option value="tues">Tuesday</option>
+  				<option value="wed">Wednesday</option>
+  				<option value="thurs">Thursday</option>
+  				<option value="fri">Friday</option>
+				</select>
+				<label for="to">to:</label>
+				<select id="to">
+  				<option value="mon">Monday</option>
+  				<option value="tues">Tuesday</option>
+  				<option value="wed">Wednesday</option>
+  				<option value="thurs">Thursday</option>
+  				<option value="fri">Friday</option>
+				</select>
+			</span>
+			<br>
+			<br>
+				<button id = 'task' type="submit" name="">Submit task</button>	
+			</ul>
+
+		<ul class = 'vertical'>
+			<li title = 'mon'>Monday</li>
+			<li title = 'tues'>Tuesday</li>
+			<li title = 'wed'>Wednesday</li>
+			<li title = 'thurs'>Thursday</li>
+			<li title = 'fri'>Friday</li>
+		</ul>
+	</div>
+		<ul class="horizontal-task">
+		</ul>
+	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
+	<script src='Gantt.js'></script>
+</body>
+</html>

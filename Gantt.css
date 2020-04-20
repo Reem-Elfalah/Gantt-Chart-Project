@@ -1,0 +1,60 @@
+ul {
+  list-style: none;
+}
+.bars {
+	display: flex;
+	text-align: center;
+	
+}
+.bars #tasks {
+	width: 20%;
+	height: 20%;
+	border-style: solid;
+	border-radius: 50px;
+}
+.bars #days {
+	width: 80%;
+	height: 20%;
+	background-color: grey;
+	border-style: solid;
+	border-radius: 50px;
+}
+.content {
+	display: flex;
+}
+.content .vertical{
+	display: flex;
+	align-items: center;
+	width: 80%;
+	padding: 0px;
+}
+.content .vertical li {
+	text-align: center;
+	width: 25%;
+	border-right-style: solid;
+	border-right-color: grey;
+	height: 890px;
+
+}
+.content .options {
+	width: 20%;
+	padding: 0px;
+	border-right-style: solid;
+	border-right-color: grey;
+	height: 890px;
+}
+
+.content .options .task-title {
+	text-align: center;
+	padding: 0px;
+
+}
+
+.content .options button {
+	position: relative;
+	left: 108.5px;
+}
+
+.horizontal-task li {
+	position: relative;
+}
