@@ -66,21 +66,36 @@ $("#task").on("click", function() {
 	var taskName = $("#tlabel").val();
 	var from =	$("#from").val();
 	var to = $("#to").val();
-	var attr = from + '--' + to;
-	var newli = $('<li>' + taskName + '</li>')
+	var attr = from + taskName.split(" ").join("") + to 
+	var newul = $('<div><ul><li>' + taskName + '</li></ul></div>');
+	newul.attr('duration', attr);
+	$(newul).appendTo('.horizontal-task');
+	var selectAttrdiv = "div[duration = " + attr + "]";
+	var selectAttrul = "div[duration = " + attr + "] ul";
+	var selectAttrli = "div[duration = " + attr + "] ul li";
+	$(selectAttrli).attr('duration', attr);
+	$(selectAttrul).attr('duration', attr);
 	var filteredArray = daysArray.filter(el => el.attributes.day.value == from);
-	var left = filteredArray[0].offsetLeft - 48;
+	var left = filteredArray[0].offsetLeft - 8;
  	var filteredArray = daysArray.filter(el => el.attributes.day.value == to);
- 	var width = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth - left - 71;
+ 	var width = filteredArray[0].offsetLeft + filteredArray[0].offsetWidth - left - 10;
  	var bottom = 1000 - taskSubmit[0].offsetTop;
-	newli.attr('duration', attr);
-	var selectAttr = "li[duration = " + attr + "]";
-	newli.appendTo('.horizontal-task');
-	
-	$(selectAttr).css('left', left);
-	$(selectAttr).css('width', width);
-	$(selectAttr).css('bottom', bottom);
-	$(selectAttr).css({'padding': '10px 10px', 'border-radius': '10px', 'text-align': 'center'})
-	$(selectAttr).css('background-color', color);
-	$('.horizontal-task').append('<br>')
+ 	var wli = width * 0.5 
+	$(selectAttrdiv).css({'left': left,'width': width, 'bottom': bottom, 'background-color': color, 'filter': 'brightness(120%)','padding': '0px', 'border-radius': '10px'})
+	$(selectAttrul).css ({ 'width': '0px', 'padding': '10px 0px 10px 0','background-color':color, 'filter': 'brightness(80%)', 'border-radius': '10px', 'text-align': 'center'})
+	$(selectAttrli).css({'text-align': 'center', 'display': 'inline-block', 'width': width})
+})
+
+$('.horizontal-task').on('click', function(){
+	var x = event.target.parentNode
+	var percent;
+	percent = prompt("Please enter prgress", "0%");
+	if(!(parseInt(percent.split('%')[0]) <= 100 && parseInt(percent.split('%')[0]) > 0)) {
+		while(!(parseInt(percent.split('%')[0]) <= 100 && parseInt(percent.split('%')[0]) > 0)){
+			percent = prompt("Please enter prgress", "0%");
+				if(parseInt(percent.split('%')[0]) <= 100 && parseInt(percent.split('%')[0]) > 0)
+					break;
+		}
+	}
+	$(x).css('width', percent)
 })
