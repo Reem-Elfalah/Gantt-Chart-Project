@@ -31,7 +31,7 @@ ul {
 	padding: 0px;
 }
 .content .vertical li {
-	width: 25%;
+	width: 100%;
 	padding: 8px;
 	text-align: center;	
 	border-right-style: solid;
@@ -56,13 +56,36 @@ ul {
 	left: 108.5px;
 }
 
-.content .options #subMonth {
+#subMonth {
 		position: relative;
 		margin : 10px;
-
+}
+#month{
+	margin-right: 20px;
+}
+#tlabel {
+	margin-right: 20px;
+}
+#from {
+	width:33%;
+	margin-right: 20px;
+}
+#to {
+	width:33%;
 }
 
-.horizontal-task li {
+.horizontal-task div {
+	margin:0px;
 	position: relative;
 	padding: 2px;
 }
+
+.horizontal-task div ul{
+	position: relative;
+}
+
+.horizontal-task div ul li{
+	position: relative;
+}
+
+
