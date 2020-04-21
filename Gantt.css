@@ -10,38 +10,39 @@ ul {
 	width: 20%;
 	height: 20%;
 	border-style: solid;
-	border-radius: 50px;
+	border-radius: 25px;
+	padding: 10px;
+	background-color: lightgrey;
 }
 .bars #days {
 	width: 80%;
 	height: 20%;
-	background-color: grey;
+	background-color: lightgrey;
 	border-style: solid;
-	border-radius: 50px;
+	border-radius: 25px;
+	padding: 10px;
 }
 .content {
 	display: flex;
 }
 .content .vertical{
 	display: flex;
-	align-items: center;
 	width: 80%;
 	padding: 0px;
 }
 .content .vertical li {
-	text-align: center;
 	width: 25%;
+	padding: 8px;
+	text-align: center;	
 	border-right-style: solid;
-	border-right-color: grey;
+	border-right-color: lightgrey;
 	height: 890px;
-
 }
 .content .options {
 	width: 20%;
-	padding: 0px;
 	border-right-style: solid;
-	border-right-color: grey;
-	height: 890px;
+	border-right-color: lightgrey;
+	padding-left: 10px;
 }
 
 .content .options .task-title {
@@ -50,11 +51,18 @@ ul {
 
 }
 
-.content .options button {
+.content .options #task {
 	position: relative;
 	left: 108.5px;
 }
 
+.content .options #subMonth {
+		position: relative;
+		margin : 10px;
+
+}
+
 .horizontal-task li {
 	position: relative;
+	padding: 2px;
 }

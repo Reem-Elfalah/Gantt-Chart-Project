@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 	<link rel="stylesheet" type="text/css" href="Gantt.css">
 	<title>Gantt Chart</title>
@@ -9,39 +10,33 @@
 			<div id = "tasks">Tasks</div>
 			<div id = "days">Days</div>
 	</div>
+	<br>
 		<div class = "content">
-
 			<ul class="options">
 				<li class="task-title">Add Task</li>
+				<br>
+				<span><label for="month">Month:</label>
+				<input type="month" id="month" name="month" min="2020-01" value="2020-04" max= "2020-12">
+				<button id = 'subMonth'>Submit Month</button>
+				</span>
+				<br>
 				<br>
 				<span><label for="tlabel">Task:</label>
 				<input type="text" id="tlabel" name="tlabel" placeholder="Enter a task">
 				<label for="color">Color:</label>
 				<select id="color">
-  				<option value="pink">Pink</option>
-  				<option value="mediumpurple">Purple</option>
-  				<option value="skyblue">BLUE</option>
-  				<option value="paleturquoise">Turquoise</option>
-  				<option value="lightseagreen">Green</option>
+  				<option value="pink">Moon</option>
+  				<option value="mediumpurple">Light</option>
+  				<option value="skyblue">Stars</option>
+  				<option value="paleturquoise">Galaxy</option>
+  				<option value="lightseagreen">Space</option>
 				</select><br><br>
 				</span>
 				<span>
 				<label for="from">From:</label>
-				<select id="from">
-  				<option value="mon">Monday</option>
-  				<option value="tues">Tuesday</option>
-  				<option value="wed">Wednesday</option>
-  				<option value="thurs">Thursday</option>
-  				<option value="fri">Friday</option>
-				</select>
+				<input type="date" name= "from" id="from" min = >
 				<label for="to">to:</label>
-				<select id="to">
-  				<option value="mon">Monday</option>
-  				<option value="tues">Tuesday</option>
-  				<option value="wed">Wednesday</option>
-  				<option value="thurs">Thursday</option>
-  				<option value="fri">Friday</option>
-				</select>
+				<input type = "date" name = "to" id="to">
 			</span>
 			<br>
 			<br>
@@ -49,15 +44,15 @@
 			</ul>
 
 		<ul class = 'vertical'>
-			<li title = 'mon'>Monday</li>
-			<li title = 'tues'>Tuesday</li>
-			<li title = 'wed'>Wednesday</li>
-			<li title = 'thurs'>Thursday</li>
-			<li title = 'fri'>Friday</li>
-		</ul>
+
+		</ul>		
+
 	</div>
-		<ul class="horizontal-task">
-		</ul>
+	<div>		
+	<ul class="horizontal-task">
+	</ul>
+	</div>
+
 	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
 	<script src='Gantt.js'></script>
 </body>
