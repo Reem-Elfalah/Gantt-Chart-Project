@@ -10,49 +10,40 @@
 			<div id = "tasks">Tasks</div>
 			<div id = "days">Days</div>
 	</div>
-	<br>
 		<div class = "content">
 			<ul class="options">
-				<li class="task-title">Add Task</li>
-				<br>
+				<li class="task-title">Add Task</li><br>
 				<span><label for="month">Month:</label>
 				<input type="month" id="month" name="month" min="2020-01" value="2020-04" max= "2020-12">
-				<button id = 'subMonth'>Submit Month</button>
-				</span>
-				<br>
-				<br>
-				<span><label for="tlabel">Task:</label>
-				<input type="text" id="tlabel" name="tlabel" placeholder="Enter a task">
-				<label for="color">Team:</label>
-				<select id="color">
-  				<option value="pink">Moon</option>
-  				<option value="mediumpurple">Light</option>
-  				<option value="skyblue">Stars</option>
-  				<option value="paleturquoise">Galaxy</option>
-  				<option value="lightseagreen">Space</option>
-				</select><br><br>
+				<button id = 'subMonth'>Month view</button>
 				</span>
 				<span>
 				<label for="from">From:</label>
 				<input type="date" name= "from" id="from" min = >
 				<label for="to">To:</label>
 				<input type = "date" name = "to" id="to">
-			</span>
-			<br>
-			<br>
-				<button id = 'task' type="submit" name="">Submit task</button>	
+				</span><br><br>
+				<span><label for="tlabel">Task:</label>
+				<input type="text" id="tlabel" name="tlabel" placeholder="Enter a task">
+				<label for="color">Team:</label>
+				<select id="color">
+  				<option value="lightcoral">Moon</option>
+  				<option value="mediumpurple">Light</option>
+  				<option value="steelblue">Stars</option>
+  				<option value="PALEVIOLETRED">Galaxy</option>
+  				<option value="lightseagreen">Space</option>
+				</select><br><br>
+				</span>
+				<button id = 'task' type="submit" name="">Submit task</button><br><br>	
+				<img src = 'https://media.tenor.com/images/2bbd5f66fd746cc63397a9abddeba905/tenor.gif'>
 			</ul>
-
 		<ul class = 'vertical'>
-
 		</ul>		
-
 	</div>
 	<div>		
 	<div class="horizontal-task">
 	</div>
 	</div>
-
 	<script src='https://code.jquery.com/jquery-2.2.4.js'></script>
 	<script src='Gantt.js'></script>
 </body>

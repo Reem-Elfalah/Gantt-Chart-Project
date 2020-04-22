@@ -1,64 +1,95 @@
+body {
+	background-color: #F4F6F6 ;
+}
 ul {
   list-style: none;
 }
 .bars {
 	display: flex;
-	text-align: center;
-	
+	text-align: center;	
 }
 .bars #tasks {
+	font-weight: bold;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 22px;
 	width: 20%;
 	height: 20%;
 	border-style: solid;
-	border-radius: 25px;
+	border-color: #EDBB99;
+	border-radius: 20px;
 	padding: 10px;
-	background-color: lightgrey;
+	margin-right: 7px;
+	background-color: #FAE5D3 ;
 }
 .bars #days {
+	font-weight: bold;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 22px;
 	width: 80%;
 	height: 20%;
-	background-color: lightgrey;
+	background-color: #FAE5D3 ;
 	border-style: solid;
-	border-radius: 25px;
+	border-color: #EDBB99;
+	border-radius: 20px;
 	padding: 10px;
 }
 .content {
 	display: flex;
+	padding: 0px
 }
 .content .vertical{
 	display: flex;
 	width: 80%;
 	padding: 0px;
+	height: 50px;
 }
+.content .vertical>li:first-child {
+	border-left-style: solid;
+	border-left-color: #C6C3C1;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px
+}
+.content .vertical>li:last-child {
+	border-right-style: solid;
+	border-right-color: #C6C3C1;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px
+}
+
 .content .vertical li {
+	font-weight: bold;
 	width: 100%;
 	padding: 8px;
 	text-align: center;	
 	border-right-style: solid;
-	border-right-color: lightgrey;
-	height: 890px;
+	border-bottom-style: solid;
+	border-color: #C6C3C1;
+	height: 865px;
 }
 .content .options {
 	width: 20%;
-	border-right-style: solid;
-	border-right-color: lightgrey;
-	padding-left: 10px;
+	padding: 7px 7px 174px 7px;
+	margin-right: 8px;
+	background-color: #FAE5D3 ;
+	border-color: #EDBB99;
+	border-style: solid;
+	border-radius: 15px;
 }
 
 .content .options .task-title {
 	text-align: center;
 	padding: 0px;
-
+	margin: 10px 0px 0px 0px;
 }
-
 .content .options #task {
 	position: relative;
-	left: 108.5px;
+	left: 125px;
+	margin-bottom: 20px;
+	padding: 3px 10px 3px 10px;
 }
-
 #subMonth {
-		position: relative;
-		margin : 10px;
+	position: relative;
+	margin : 10px;
 }
 #month{
 	margin-right: 20px;
@@ -73,19 +104,24 @@ ul {
 #to {
 	width:33%;
 }
-
 .horizontal-task div {
 	margin:0px;
 	position: relative;
 	padding: 2px;
 }
-
 .horizontal-task div ul{
 	position: relative;
 }
 
 .horizontal-task div ul li{
 	position: relative;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-size: 16px;
+}
+img {
+	position: relative;
+	width: 100%;
+	height: auto;
 }
 
 
