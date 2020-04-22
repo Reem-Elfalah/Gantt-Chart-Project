@@ -61,7 +61,9 @@ $("#to").change(function(){
 
 
 $("#task").on("click", function() {//submit task
-	if($("#tlabel").val() == '')	//check for empty values
+	 if($('.vertical').html() === '')
+		return alert('Submit month first!')
+	else if($("#tlabel").val() == '')	//check for empty values
 		return alert('Enter a Task!')
 	else if( $("#from").val() == '' || $("#to").val() == '')
 		return alert('Enter dates!')
